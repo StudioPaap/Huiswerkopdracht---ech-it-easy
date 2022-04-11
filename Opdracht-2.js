@@ -20,7 +20,8 @@ for(i=0; i<tvSoldOut.length; i++){
      tvSold++;
 };
 console.log(`Er zijn ${tvSold} tv's verkocht`);
-
+    const textNode = document.createTextNode(`Er zijn ${tvSold} tv's uitverkocht` );
+    document.body.appendChild(textNode);
 };
 
 howManyTvSoldout();
@@ -33,23 +34,7 @@ Opdracht 2b: Zorg ervoor dat dit aantal in het groen wordt weergegeven op de pag
 4. groene tekst definieren
 */
 
-// let tvSoldText = document.createElement('H3');
-// tvSoldText.textContent = "er zijn tvs verkocht"
-// tvSoldText.setAttribute('class', 'green-text');
-//
-//
-// const para = document.createElement("h3");
-// const node = document.createTextNode("Er zijn tv's verkocht");
-// para.appendChild(node);
-//
-// const element = document.getElementById("div1");
-// const child = document.getElementById("p1");
-// element.insertBefore(para, child);
-
-
-
-/*
-Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent. Log de uitkomst in de console.
+/*Opdracht 2c: Hoeveel tv's heeft Tech It Easy ingekocht? Schrijf een script dat dit berekent. Log de uitkomst in de console.
 1. array mappen die het aantal  ingekochte een nieuwe array van maakt.
 2. een for loop creeearen die de waardes bij elkaar optelt.
 3. console.log die waardes
@@ -59,7 +44,6 @@ const listInkoop = inventory.map((tv) =>{
     return(tv.originalStock);
 });
 
-console.log(listInkoop);
 
 let listInkoopSum = 0;
 
@@ -67,13 +51,15 @@ for(i=0; i<listInkoop.length; i++){
     listInkoopSum += listInkoop[i];
 };
 console.log(listInkoopSum);
-
+const textNode = document.createTextNode(`Er zijn ${listInkoopSum} tv's ingekocht` );
+document.body.appendChild(textNode);
 
 
 /*
 Opdracht 2d: Zorg ervoor dat dit aantal in het blauw wordt weergegeven op de pagina.
 1.
-2.
+2. const textNode = document.createTextNode(`Er zijn ${tvSold} tv's uitverkocht` );
+    document.body.appendChild(textNode);
 3.
 4.
 5.
@@ -90,7 +76,6 @@ Opdracht 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
 const listVerkoop = inventory.map((tv) =>{
     return(tv.sold);
 });
-console.log(listVerkoop);
 
 let listVerkoopSum = 0;
 
@@ -98,3 +83,5 @@ for(i=0; i<listVerkoop.length; i++){
     listVerkoopSum += listVerkoop[i];
 };
 console.log(listVerkoopSum);
+const textNode2 = document.createTextNode(`Er moeten nog ${listVerkoopSum} tv's worden verkocht`);
+document.body.appendChild(textNode2);
