@@ -1,6 +1,7 @@
 // VOORRAAD ARRAY MET TV'S
 const inventory = [
-  {
+
+   {
     type: '43PUS6504/12',
     name: '4K TV',
     brand: 'Philips',
@@ -161,3 +162,4 @@ const inventory = [
     sold: 8,
   },
 ];
+
